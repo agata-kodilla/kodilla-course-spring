@@ -1,4 +1,4 @@
-package com1.kodilla.spring.web;
+package com.kodilla.spring.web;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
