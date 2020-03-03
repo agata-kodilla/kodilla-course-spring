@@ -1,4 +1,4 @@
-package kodilla.spring.intro.shape;
+package com.kodilla.springintro;
 
 import org.junit.Assert;
 import org.junit.Test;

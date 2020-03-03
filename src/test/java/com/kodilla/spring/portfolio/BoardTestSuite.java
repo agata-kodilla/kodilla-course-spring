@@ -37,15 +37,16 @@ public class BoardTestSuite {
     }
 
     @Test
-    public void testTaskAdd(){
+    public void testTaskAdd() {
         //Given
         ApplicationContext context = new AnnotationConfigApplicationContext(BoardConfig.class);
         Board board = context.getBean(Board.class);
+        TaskList toDoList = context.getBean("toDoList", TaskList.class);
         //When
         List<String> tasks = board.getToDoList().getTasks();
         tasks.add("todotask");
         //Then
-        Assert.assertEquals(1, tasks.size());
+        Assert.assertEquals(1, toDoList.getTasks().size());
 
     }
 }

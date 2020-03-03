@@ -1,4 +1,4 @@
-package kodilla.spring.intro.shape;
+package com.kodilla.springintro;
 
 public class Figure {
     public void draw() {

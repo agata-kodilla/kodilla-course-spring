@@ -10,7 +10,9 @@ public class SettingsFileEngineTestSuite {
 
     @BeforeClass
     public static void openSettingsFile() {
-        SettingsFileEngine.getInstance().open("myapp.settings");
+
+        settingsFileEngine = SettingsFileEngine.getInstance();
+        settingsFileEngine.open("myapp.settings");
     }
 
     @AfterClass
