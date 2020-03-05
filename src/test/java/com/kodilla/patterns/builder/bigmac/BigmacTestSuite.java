@@ -34,4 +34,15 @@ public class BigmacTestSuite {
         //Then
         Assert.assertEquals(bigmac.toString(), new Bigmac("normal", null, 4, null).toString());
     }
+
+    @Test
+    public void testBigmacNewWithoutBun() {
+        //Given
+        Bigmac bigmac = new BigmacBuilder()
+                .build();
+        System.out.println(bigmac);
+        //When
+        //Then
+        Assert.assertEquals(bigmac.toString(), new Bigmac(null,null,0,null).toString());
+    }
 }

@@ -1,10 +1,13 @@
 package com.kodilla.patterns.builder.bigmac;
 
+import javax.validation.constraints.NotNull;
 import java.util.List;
 
 public final class BigmacBuilder {
+    @NotNull
     private String bun;
     private String sauce;
+    @NotNull
     private int burgers;
     private List<Ingredient> ingredients;
 
