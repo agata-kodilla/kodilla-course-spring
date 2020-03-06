@@ -11,8 +11,6 @@ public class BigmacTestSuite {
     public void testIngredientsInBigmac() {
         //Given
         Bigmac bigmac = new BigmacBuilder()
-                .bun("normal")
-                .burgers(4)
                 .ingredients(new ArrayList<>(Arrays.asList(Ingredient.BECON, Ingredient.CHEESE)))
                 .build();
         System.out.println(bigmac);
@@ -26,23 +24,12 @@ public class BigmacTestSuite {
     public void testBigmacNew() {
         //Given
         Bigmac bigmac = new BigmacBuilder()
+                .burgers(2)
                 .bun("normal")
-                .burgers(4)
                 .build();
         System.out.println(bigmac);
         //When
         //Then
-        Assert.assertEquals(bigmac.toString(), new Bigmac("normal", null, 4, null).toString());
-    }
-
-    @Test
-    public void testBigmacNewWithoutBun() {
-        //Given
-        Bigmac bigmac = new BigmacBuilder()
-                .build();
-        System.out.println(bigmac);
-        //When
-        //Then
-        Assert.assertEquals(bigmac.toString(), new Bigmac(null,null,0,null).toString());
+        Assert.assertEquals(bigmac.toString(), new Bigmac("normal", 2, null, null).toString());
     }
 }

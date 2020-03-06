@@ -1,6 +1,5 @@
 package com.kodilla.patterns.builder.bigmac;
 
-import javax.validation.constraints.NotNull;
 import java.util.List;
 
 public class Bigmac {
@@ -9,7 +8,7 @@ public class Bigmac {
     private final int burgers;
     private final List<Ingredient> ingredients;
 
-    public Bigmac(@NotNull String bun, String sauce, @NotNull int burgers, List<Ingredient> ingredients) {
+    public Bigmac(String bun, int burgers, String sauce, List<Ingredient> ingredients) {
         if(bun==null){
             throw new NullPointerException("bun");
         }
@@ -17,9 +16,9 @@ public class Bigmac {
             throw new NullPointerException("burgers");
         } else {
             this.bun = bun;
-            this.sauce = sauce;
             this.burgers = burgers;
-            this.ingredients = ingredients;
+            this.sauce=sauce;
+            this.ingredients=ingredients;
         }
     }
 

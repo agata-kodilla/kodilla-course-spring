@@ -4,10 +4,8 @@ import javax.validation.constraints.NotNull;
 import java.util.List;
 
 public final class BigmacBuilder {
-    @NotNull
     private String bun;
     private String sauce;
-    @NotNull
     private int burgers;
     private List<Ingredient> ingredients;
 
@@ -39,6 +37,11 @@ public final class BigmacBuilder {
     }
 
     public Bigmac build() {
-        return new Bigmac(bun, sauce, burgers, ingredients);
+        return new Bigmac(bun, burgers, sauce, ingredients);
+    }
+
+    public BigmacBuilder addBurger() {
+        burgers += 1;
+        return this;
     }
 }

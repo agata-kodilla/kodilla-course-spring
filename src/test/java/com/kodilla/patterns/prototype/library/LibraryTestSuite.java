@@ -41,7 +41,6 @@ public class LibraryTestSuite {
         } catch (CloneNotSupportedException e) {
             System.out.println(e);
         }
-
         //When
 
         //Then
