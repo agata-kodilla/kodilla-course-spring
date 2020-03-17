@@ -1,3 +1,4 @@
 rootProject.name = 'kodilla-course-spring'
 include 'kodilla-jdbc'
+include 'kodilla-hiberante'
 
