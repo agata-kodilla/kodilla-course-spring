@@ -1,10 +1,15 @@
 package com.kodilla.hibernate.manytomany;
 
+import com.kodilla.hibernate.task.Task;
+
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import java.util.ArrayList;
 import java.util.List;
-
+@NamedQuery(
+        name = "retreiveEmployeeBySurname",
+        query = "FROM EMPLOYEE WHERE surname = :SURNAME"
+)
 @Entity
 @Table(name = "EMPLOYEES")
 public class Employee {
