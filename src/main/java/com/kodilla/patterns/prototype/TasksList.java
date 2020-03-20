@@ -8,23 +8,23 @@ public final class TasksList {
     final private List<Task> tasks = new ArrayList<>();
 
     public TasksList(final String name) {
-            this.name = name;
+        this.name = name;
     }
 
     public List<Task> getTasks() {
-            return tasks;
+        return tasks;
     }
 
     public String getName() {
-            return name;
+        return name;
     }
 
     @Override
     public String toString() {
-            String s = "   List [" + name + "]";
-            for(Task task : tasks) {
-                    s = s + "\n" + task.toString();
-            }
-            return s;
+        String s = "   List [" + name + "]";
+        for (Task task : tasks) {
+            s = s + "\n" + task.toString();
+        }
+        return s;
     }
 }

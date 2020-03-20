@@ -8,29 +8,29 @@ public final class Book {
     final LocalDate publicationDate;
 
     public Book(final String title, final String author, final LocalDate publicationDate) {
-            this.title = title;
-            this.author = author;
-            this.publicationDate = publicationDate;
+        this.title = title;
+        this.author = author;
+        this.publicationDate = publicationDate;
     }
 
     public String getTitle() {
-            return title;
+        return title;
     }
 
     public String getAuthor() {
-            return author;
+        return author;
     }
 
     public LocalDate getPublicationDate() {
-            return publicationDate;
+        return publicationDate;
     }
 
     @Override
     public String toString() {
-            return "Book{" +
-                            "title='" + title + '\'' +
-                            ", author='" + author + '\'' +
-                            ", publicationDate=" + publicationDate +
-                            '}';
+        return "Book{" +
+                "title='" + title + '\'' +
+                ", author='" + author + '\'' +
+                ", publicationDate=" + publicationDate +
+                '}';
     }
 }

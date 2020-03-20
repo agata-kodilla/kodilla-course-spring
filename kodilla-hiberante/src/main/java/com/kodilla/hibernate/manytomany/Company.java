@@ -6,6 +6,7 @@ import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import java.util.ArrayList;
 import java.util.List;
+
 @NamedNativeQuery(
         name = "Company.retrieveCompanyByParam",
         query = "SELECT from Comapny WHERE name like PARAM%",
@@ -22,7 +23,7 @@ public class Company {
     }
 
     public Company(String name) {
-            this.name = name;
+        this.name = name;
     }
 
     @Id
@@ -30,24 +31,24 @@ public class Company {
     @NotNull
     @Column(name = "COMPANY_ID", unique = true)
     public int getId() {
-            return id;
+        return id;
     }
 
     @NotNull
     @Column(name = "COMPANY_NAME")
     public String getName() {
-            return name;
+        return name;
     }
 
     private void setId(int id) {
-            this.id = id;
+        this.id = id;
     }
 
     private void setName(String name) {
-            this.name = name;
+        this.name = name;
     }
 
-    @ManyToMany(cascade = CascadeType.ALL, mappedBy = "campanies")
+    @ManyToMany(cascade = CascadeType.ALL, mappedBy = "companies")
     public List<Employee> getEmployees() {
         return employees;
     }

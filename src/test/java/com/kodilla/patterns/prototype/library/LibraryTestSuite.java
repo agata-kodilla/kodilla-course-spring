@@ -17,9 +17,9 @@ public class LibraryTestSuite {
     public void testGetBooks() {
         //given
         Set<Book> books = new HashSet<>();
-        for(int i=0;i<10;i++){
-            Book book = new Book("title"+i,"author"+i, LocalDate.of(2015+i, 1+i, 1+i));
-       books.add(book);
+        for (int i = 0; i < 10; i++) {
+            Book book = new Book("title" + i, "author" + i, LocalDate.of(2015 + i, 1 + i, 1 + i));
+            books.add(book);
         }
 
         Library library = new Library("library 1");
@@ -44,9 +44,9 @@ public class LibraryTestSuite {
         //When
 
         //Then
-        System.out.println("library "+ library.toString());
-        System.out.println("clonedLibrary "+clonedLibrary.toString());
-        System.out.println("deepClonedLibrary "+deepClonedLibrary.toString());
+        System.out.println("library " + library.toString());
+        System.out.println("clonedLibrary " + clonedLibrary.toString());
+        System.out.println("deepClonedLibrary " + deepClonedLibrary.toString());
         Assert.assertEquals(10, library.getBooks().size());
         Assert.assertEquals(10, clonedLibrary.getBooks().size());
         Assert.assertEquals(10, deepClonedLibrary.getBooks().size());

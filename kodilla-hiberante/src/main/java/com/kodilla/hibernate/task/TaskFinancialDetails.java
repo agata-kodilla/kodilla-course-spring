@@ -15,8 +15,8 @@ public class TaskFinancialDetails {
     }
 
     public TaskFinancialDetails(BigDecimal price, boolean paid) {
-            this.price = price;
-            this.paid = paid;
+        this.price = price;
+        this.paid = paid;
     }
 
     @Id
@@ -24,28 +24,28 @@ public class TaskFinancialDetails {
     @NotNull
     @Column(name = "ID", unique = true)
     public int getId() {
-            return id;
+        return id;
     }
 
     @Column(name = "PRICE")
     public BigDecimal getPrice() {
-            return price;
+        return price;
     }
 
     @Column(name = "PAID")
     public boolean isPaid() {
-            return paid;
+        return paid;
     }
 
     private void setId(int id) {
-            this.id = id;
+        this.id = id;
     }
 
     private void setPrice(BigDecimal price) {
-            this.price = price;
+        this.price = price;
     }
 
     private void setPaid(boolean paid) {
-            this.paid = paid;
+        this.paid = paid;
     }
 }

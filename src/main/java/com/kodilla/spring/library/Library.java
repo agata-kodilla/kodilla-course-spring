@@ -11,14 +11,14 @@ public final class Library {
     private final LibraryDbController libraryDbController;
 
     public Library(final LibraryDbController libraryDbController) {
-            this.libraryDbController = libraryDbController;
+        this.libraryDbController = libraryDbController;
     }
 
     public void saveToDb() {
-            libraryDbController.saveData();
+        libraryDbController.saveData();
     }
 
     public void loadFromDb() {
-            libraryDbController.loadData();
+        libraryDbController.loadData();
     }
 }

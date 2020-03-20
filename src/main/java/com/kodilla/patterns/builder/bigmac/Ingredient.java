@@ -2,7 +2,7 @@ package com.kodilla.patterns.builder.bigmac;
 
 public enum Ingredient {
 
-   // sałata, cebula, bekon, ogórek, papryczki chilli, pieczarki, krewetki, ser
+    // sałata, cebula, bekon, ogórek, papryczki chilli, pieczarki, krewetki, ser
 
     LETTUCE("lettuce"),
     ONION("onion"),

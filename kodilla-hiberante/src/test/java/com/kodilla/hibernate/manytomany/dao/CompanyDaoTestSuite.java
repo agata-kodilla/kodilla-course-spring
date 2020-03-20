@@ -22,53 +22,53 @@ public class CompanyDaoTestSuite {
     EmployeeDao employeeDao;
 
     @Test
-    public void testSaveManyToMany(){
-            //Given
-            Employee johnSmith = new Employee("John", "Smith");
-            Employee stephanieClarckson = new Employee("Stephanie", "Clarckson");
-            Employee lindaKovalsky = new Employee("Linda", "Kovalsky");
+    public void testSaveManyToMany() {
+        //Given
+        Employee johnSmith = new Employee("John", "Smith");
+        Employee stephanieClarckson = new Employee("Stephanie", "Clarckson");
+        Employee lindaKovalsky = new Employee("Linda", "Kovalsky");
 
-            Company softwareMachine = new Company("Software Machine");
-            Company dataMaesters = new Company("Data Maesters");
-            Company greyMatter = new Company("Grey Matter");
+        Company softwareMachine = new Company("Software Machine");
+        Company dataMaesters = new Company("Data Maesters");
+        Company greyMatter = new Company("Grey Matter");
 
         softwareMachine.getEmployees().add(johnSmith);
-            dataMaesters.getEmployees().add(stephanieClarckson);
-            dataMaesters.getEmployees().add(lindaKovalsky);
-            greyMatter.getEmployees().add(johnSmith);
-            greyMatter.getEmployees().add(lindaKovalsky);
+        dataMaesters.getEmployees().add(stephanieClarckson);
+        dataMaesters.getEmployees().add(lindaKovalsky);
+        greyMatter.getEmployees().add(johnSmith);
+        greyMatter.getEmployees().add(lindaKovalsky);
 
-            johnSmith.getCompanies().add(softwareMachine);
-            johnSmith.getCompanies().add(greyMatter);
-            stephanieClarckson.getCompanies().add(dataMaesters);
-            lindaKovalsky.getCompanies().add(dataMaesters);
-            lindaKovalsky.getCompanies().add(greyMatter);
+        johnSmith.getCompanies().add(softwareMachine);
+        johnSmith.getCompanies().add(greyMatter);
+        stephanieClarckson.getCompanies().add(dataMaesters);
+        lindaKovalsky.getCompanies().add(dataMaesters);
+        lindaKovalsky.getCompanies().add(greyMatter);
 
-            //When
-            companyDao.save(softwareMachine);
-            int softwareMachineId = softwareMachine.getId();
-            companyDao.save(dataMaesters);
-            int dataMaestersId = dataMaesters.getId();
-            companyDao.save(greyMatter);
-            int greyMatterId = greyMatter.getId();
+        //When
+        companyDao.save(softwareMachine);
+        int softwareMachineId = softwareMachine.getId();
+        companyDao.save(dataMaesters);
+        int dataMaestersId = dataMaesters.getId();
+        companyDao.save(greyMatter);
+        int greyMatterId = greyMatter.getId();
 
-            //Then
-            Assert.assertNotEquals(0, softwareMachineId);
-            Assert.assertNotEquals(0, dataMaestersId);
-            Assert.assertNotEquals(0, greyMatterId);
+        //Then
+        Assert.assertNotEquals(0, softwareMachineId);
+        Assert.assertNotEquals(0, dataMaestersId);
+        Assert.assertNotEquals(0, greyMatterId);
 
-            //CleanUp
-            //try {
-            //    companyDao.deleteById(softwareMachineId);
-            //    companyDao.deleteById(dataMaestersId);
-            //    companyDao.deleteById(greyMatterId);
-            //} catch (Exception e) {
-            //    //do nothing
-            //}
+        //CleanUp
+        //try {
+        //    companyDao.deleteById(softwareMachineId);
+        //    companyDao.deleteById(dataMaestersId);
+        //    companyDao.deleteById(greyMatterId);
+        //} catch (Exception e) {
+        //    //do nothing
+        //}
     }
 
     @Test
-    public void testNewMethods(){
+    public void testNewMethods() {
         //Given
         Employee johnSmith = new Employee("John", "Smith");
         Employee stephanieClarckson = new Employee("Stephanie", "Clarckson");
@@ -100,8 +100,8 @@ public class CompanyDaoTestSuite {
         lindaKovalsky.getCompanies().add(greyMatter);
 
         //When
-        companyDao.save(companies);
-        employeeDao.save(employees);
+       // companyDao.save(companies);
+       // employeeDao.save(employees);
 
         //When
         List<Employee> employeesResult = employeeDao.retrieveEmployeeBySurname("John");
@@ -113,18 +113,17 @@ public class CompanyDaoTestSuite {
             Assert.assertEquals(3, companies.size());
         } finally {
             //CleanUp
-            companyDao.deleteById(id);
-            employeeDao.deleteById();
+          //  companyDao.deleteById(id);
+          //  employeeDao.deleteById();
         }
     }
 
-        //CleanUp
-        //try {
-        //    companyDao.deleteById(softwareMachineId);
-        //    companyDao.deleteById(dataMaestersId);
-        //    companyDao.deleteById(greyMatterId);
-        //} catch (Exception e) {
-        //    //do nothing
-        //}
-    }
+    //CleanUp
+    //try {
+    //    companyDao.deleteById(softwareMachineId);
+    //    companyDao.deleteById(dataMaestersId);
+    //    companyDao.deleteById(greyMatterId);
+    //} catch (Exception e) {
+    //    //do nothing
+    //}
 }

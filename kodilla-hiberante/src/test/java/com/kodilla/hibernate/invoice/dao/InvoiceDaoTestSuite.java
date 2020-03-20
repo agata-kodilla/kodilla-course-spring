@@ -30,7 +30,7 @@ public class InvoiceDaoTestSuite {
         Product product1 = new Product("product1");
         Item item1 = new Item(product1, new BigDecimal(150), 3, new BigDecimal(450));
         Item item2 = new Item(product1, new BigDecimal(10), 2, new BigDecimal(20));
-        List<Item> items =new ArrayList<>();
+        List<Item> items = new ArrayList<>();
         items.add(item1);
         items.add(item2);
         Invoice invoice = new Invoice();

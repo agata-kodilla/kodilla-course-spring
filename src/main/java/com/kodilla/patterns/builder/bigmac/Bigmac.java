@@ -9,16 +9,15 @@ public class Bigmac {
     private final List<Ingredient> ingredients;
 
     public Bigmac(String bun, int burgers, String sauce, List<Ingredient> ingredients) {
-        if(bun==null){
+        if (bun == null) {
             throw new NullPointerException("bun");
-        }
-        else if(burgers == 0) {
+        } else if (burgers == 0) {
             throw new NullPointerException("burgers");
         } else {
             this.bun = bun;
             this.burgers = burgers;
-            this.sauce=sauce;
-            this.ingredients=ingredients;
+            this.sauce = sauce;
+            this.ingredients = ingredients;
         }
     }
 

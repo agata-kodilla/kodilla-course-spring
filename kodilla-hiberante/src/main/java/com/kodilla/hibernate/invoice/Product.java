@@ -13,7 +13,7 @@ public class Product {
     }
 
     public Product(String name) {
-        this.name=name;
+        this.name = name;
     }
 
     @Id
@@ -29,7 +29,7 @@ public class Product {
     }
 
     @NotNull
-    @Column(name="NAME")
+    @Column(name = "NAME")
     public String getName() {
         return name;
     }

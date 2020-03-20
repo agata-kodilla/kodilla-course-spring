@@ -6,9 +6,10 @@ import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import java.util.ArrayList;
 import java.util.List;
+
 @NamedQuery(
-        name = "retreiveEmployeeBySurname",
-        query = "FROM EMPLOYEE WHERE surname = :SURNAME"
+        name = "retrieveEmployeeBySurname",
+        query = "FROM Employee WHERE surname = :SURNAME"
 )
 @Entity
 @Table(name = "EMPLOYEES")
@@ -22,8 +23,8 @@ public class Employee {
     }
 
     public Employee(String firstname, String lastname) {
-            this.firstname = firstname;
-            this.lastname = lastname;
+        this.firstname = firstname;
+        this.lastname = lastname;
     }
 
     @Id
@@ -31,31 +32,31 @@ public class Employee {
     @NotNull
     @Column(name = "EMPLOYEE_ID", unique = true)
     public int getId() {
-            return id;
+        return id;
     }
 
     @NotNull
     @Column(name = "FIRSTNAME")
     public String getFirstname() {
-            return firstname;
+        return firstname;
     }
 
     @NotNull
     @Column(name = "LASTNAME")
     public String getLastname() {
-            return lastname;
+        return lastname;
     }
 
     private void setId(int id) {
-            this.id = id;
+        this.id = id;
     }
 
     private void setFirstname(String firstname) {
-            this.firstname = firstname;
+        this.firstname = firstname;
     }
 
     private void setLastname(String lastname) {
-            this.lastname = lastname;
+        this.lastname = lastname;
     }
 
     @ManyToMany(cascade = CascadeType.ALL)

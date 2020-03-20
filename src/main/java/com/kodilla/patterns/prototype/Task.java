@@ -4,15 +4,15 @@ public final class Task {
     final private String name;
 
     public Task(final String name) {
-            this.name = name;
+        this.name = name;
     }
 
     public String getName() {
-            return name;
+        return name;
     }
 
     @Override
     public String toString() {
-            return "      Task [" + name + "]";
+        return "      Task [" + name + "]";
     }
 }

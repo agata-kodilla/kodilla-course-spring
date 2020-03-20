@@ -10,11 +10,11 @@ import java.sql.Statement;
 public class DbManagerTestSuite {
     @Test
     public void testConnect() throws SQLException {
-            //Given
-            //When
-            DbManager dbManager = DbManager.getInstance();
-            //Then
-            Assert.assertNotNull(dbManager.getConnection());
+        //Given
+        //When
+        DbManager dbManager = DbManager.getInstance();
+        //Then
+        Assert.assertNotNull(dbManager.getConnection());
     }
 
     @Test
@@ -29,7 +29,7 @@ public class DbManagerTestSuite {
 
         //Then
         int counter = 0;
-        while(rs.next()) {
+        while (rs.next()) {
             System.out.println(rs.getInt("ID") + ", " +
                     rs.getString("FIRSTNAME") + ", " +
                     rs.getString("LASTNAME"));
@@ -56,11 +56,11 @@ public class DbManagerTestSuite {
 
         //Then
         int counter = 0;
-        while(rs.next()) {
+        while (rs.next()) {
             System.out.println(
                     rs.getString("FIRSTNAME") + ", " +
-                    rs.getString("LASTNAME") + ", " +
-                    rs.getInt("POST_NUMBER") + ", ");
+                            rs.getString("LASTNAME") + ", " +
+                            rs.getInt("POST_NUMBER") + ", ");
             counter++;
         }
         rs.close();

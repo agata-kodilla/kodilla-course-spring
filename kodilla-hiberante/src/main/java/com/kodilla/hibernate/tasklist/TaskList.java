@@ -57,14 +57,14 @@ public final class TaskList {
 
     @OneToMany
             (targetEntity = Task.class,
-            mappedBy = "taskList",
-            cascade = CascadeType.ALL,
-            fetch = FetchType.LAZY)
+                    mappedBy = "taskList",
+                    cascade = CascadeType.ALL,
+                    fetch = FetchType.LAZY)
     public List<Task> getTasks() {
         return tasks;
     }
 
-    public void setTaskList(List<Task> tasks) {
+    public void setTasks(List<Task> tasks) {
         this.tasks = tasks;
     }
 }
